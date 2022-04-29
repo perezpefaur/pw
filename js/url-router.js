@@ -51,3 +51,5 @@ const urlLocationHandler = async () => {
         });
     });
 }
+
+urlLocationHandler();
