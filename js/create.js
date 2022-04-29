@@ -18,7 +18,7 @@ function create() {
             }),
             headers: {
                 "accept": "application/json",
-                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Origin":"https://pasamelamusica.netlify.app/",
                 "Access-Control-Allow-Headers":"*",
                 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
             }
