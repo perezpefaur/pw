@@ -16,7 +16,8 @@ function create() {
             }),
             config: { headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json', 
+                'Access-Control-Allow-Origin': '*'
               }}
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
