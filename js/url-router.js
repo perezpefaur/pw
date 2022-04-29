@@ -49,5 +49,6 @@ const urlLocationHandler = async () => {
         response.text();
         console.log(response);
     });
+    console.log(html);
     document.getElementById("content").innerHTML = await html;
 }
