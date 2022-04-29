@@ -17,7 +17,8 @@ function create() {
             headers: {
                 "accept": "application/json",
                 "Access-Control-Allow-Origin":"*",
-                "Access-Control-Allow-Headers":"*"
+                "Access-Control-Allow-Headers":"*",
+                "access-control-allow-origin":"*"
             }
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
