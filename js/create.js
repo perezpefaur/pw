@@ -1,4 +1,4 @@
-const urlLocationHandler = async (location) => {
+const urlRoomHandler = async (location) => {
     if (location.length == 0) {
         location = "/";
     }
@@ -35,6 +35,6 @@ function create() {
             }).then(response => response.json())
       .then(json => {
             console.log(json);
-            urlLocationHandler('/room');
+            urlRoomHandler('/room');
             }).catch(err => alert(err))
 }
