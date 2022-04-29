@@ -19,8 +19,9 @@ function create() {
             headers: {
                 "accept": "application/json",
                 "Access-Control-Allow-Origin":"*",
-                "Access-Control-Allow-Headers":"{accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with}",
-                "Access-Control-Allow-Methods": "{DELETE, GET, OPTIONS, PATCH, POST, PUT}"
+                "Access-Control-Allow-Credentials":"true",
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
             }
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
