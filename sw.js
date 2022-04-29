@@ -1,7 +1,7 @@
 self.addEventListener("install", e => {
     e.waitUntil(
         caches.open("static").then(cache => {
-            cache.addAll(['./', './src/styles.css', './images/logo192.png'])
+            cache.addAll(['./', './src/styles.css', './images/logo.png'])
         })
     );
 });
@@ -17,7 +17,7 @@ self.addEventListener("fetch", e => {
 self.addEventListener('push', function(e) {
     var options = {
       body: 'This notification was generated from a push!',
-      icon: 'images/logo192.png',
+      icon: 'images/logo.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
@@ -25,9 +25,9 @@ self.addEventListener('push', function(e) {
       },
       actions: [
         {action: 'explore', title: 'Explore this new world',
-          icon: 'images/logo192.png'},
+          icon: 'images/logo.png'},
         {action: 'close', title: 'Close',
-          icon: 'images/logo192.png'},
+          icon: 'images/logo.png'},
       ]
     };
     e.waitUntil(

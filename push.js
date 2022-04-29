@@ -7,6 +7,6 @@ let vapidKeys = {
 
 push.setVapidDetails('mailto:test@code.co.uk', vapidKeys.publicKey,  vapidKeys.privateKey);
 
-let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/dDYr8oC2x-g:APA91bGL1jJVhk8GPXYGe2MiXCaIlXNeS-zJS5EAyIIIy9d0pu_taxnWP2fzZXe8xVMIw806j2UZmqRll27ocjHm493ZzBV0wAzhZldWmLp993hMVQdv6Wj0JnoRJglAMM50VDvRfOvT","expirationTime":null,"keys":{"p256dh":"BE5n5mFkDYLknC_B8Cm-6qg0TH_GHLhK0EhGqOJWD8HtQsjMrNLcY4Ub-00giJwV6z_kh1qB1zYzhZRkqjIkOxw","auth":"Pf4paSroukg05sHmXYqMVg"}};
+let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/fANgvJxDt5I:APA91bHEY8SUuXWtrLMPSVk-VEHVmL6Yz-TtM78yQ_H1TitwCW11JBCNu3t07MA3AeciX5Rw5F4TMpMzTRg_HqGZFo5NSASlp_nHFjYXJNUZjRJ9LESaFzzHca-pValLEwK2ZhQjqQdA","expirationTime":null,"keys":{"p256dh":"BOYny-wiJCEA3QbIdLa3TsJ-wmjPe1QEZ110-39Qyts6DZGFEBcnwbDE7iP2_OsnRPh1jC4iAn6oVrzs1v82DRo","auth":"7nSYTBasVEFqnxyY_YJOdQ"}};
 
 push.sendNotification(sub, 'test message');
