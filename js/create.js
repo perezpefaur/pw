@@ -1,17 +1,3 @@
-const urlRoomHandler = async (location) => {
-    if (location.length == 0) {
-        location = "/";
-    }
-
-    const route = urlRoutes[location] || urlRoutes[404];
-    const html = await fetch(route.template).then((response) => {
-        response.text().then((data) => {
-            document.getElementById("content").innerHTML = data;
-        });
-    });
-}
-
-
 function create() {
     let votes_to_skip = document.getElementById('votes_to_skip');
     let guest_can_pause = document.getElementById('guest_can_pause');
@@ -33,8 +19,5 @@ function create() {
                 "Access-Control-Allow-Origin":"*"
             }
             }).then(response => response.json())
-      .then(json => {
-            console.log(json);
-            urlRoomHandler('/room');
-            }).catch(err => alert(err))
+      .then(json => console.log(json)).catch(err => alert(err))
 }
