@@ -15,21 +15,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
-        <div id="main">
-            <div id="app">
-                <script>
-                    async function subscribe() {
-                        let sw = await navigator.serviceWorker.ready;
-                        let push = await sw.pushManager.subscribe({
-                            userVisibleOnly: true,
-                            applicationServerKey: 'BB2VclKxEI2khPyc0DZyhtlvhBYwfGKr-cd-PSk5-0h2xRL6vXNYF8kSXJe5s7L0lR2-YuBpVppGUYz4pEmsTeo'
-                        })
-                        console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
-                    }
-                </script>
-                <button class="btn waves-effect waves-light yellow darken-4" onclick="subscribe()">Subscribe</button>
-                <script type="module" src="static/js/index.js"></script>
+        <div id="container">
+            <div id="main">
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                </nav>
+                <div id="content"></div>
             </div>
         </div>
+        <script>
+            async function subscribe() {
+                let sw = await navigator.serviceWorker.ready;
+                let push = await sw.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: 'BB2VclKxEI2khPyc0DZyhtlvhBYwfGKr-cd-PSk5-0h2xRL6vXNYF8kSXJe5s7L0lR2-YuBpVppGUYz4pEmsTeo'
+                })
+                console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
+            }
+        </script>
+        <button class="btn waves-effect waves-light yellow darken-4" onclick="subscribe()">Subscribe</button>
+        <script type="module" src="js/index.js"></script>
+        <script type="module" src="js/url-router.js"></script>
     </body>
 </html>
