@@ -7,7 +7,6 @@ function create() {
     }
     console.log(votes_to_skip.value);
     console.log(guest_can_pause.checked);
-    console.log('matias')
     fetch('http://127.0.0.1:8000/api/create-room', { 
             method: 'POST',
             body: JSON.stringify({
