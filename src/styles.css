@@ -68,11 +68,9 @@ input:focus{
 }
 img{
   width:255px;
-  height:89.9851px;
   display:block;
   margin-left:auto;
   margin-right:auto;
-  filter: invert(99%) sepia(95%) saturate(0%) hue-rotate(33deg) brightness(104%) contrast(101%);
 }
 input[type="text"]
 {
