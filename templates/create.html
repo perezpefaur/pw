@@ -3,7 +3,8 @@
   <br><br><br><br>
   <img src="images/logo.png"></img>
   <br>
-  <form action="http://127.0.0.1:8000/api/create-room" method="post">
+  <div id="error"> </div>
+  <form id="form" action="http://127.0.0.1:8000/api/create-room" method="post">
     <input placeholder="Votes to Skip" type="text" id="votes_to_skip" name="votes_to_skip"></input>
     <div class="mid">
         <p> ¿Invitados pueden pausar la musica? </p>
@@ -11,7 +12,7 @@
     <div class="mid">
         <br>
         <label class="rocker rocker-small">
-        <input type="checkbox">
+        <input name="guest_can_pause" id="guest_can_pause" type="checkbox">
             <span class="switch-left">Si</span>
             <span class="switch-right">No</span>
         </input>
@@ -25,5 +26,15 @@
   <div class="createcontainer"><div class="create1">
     <a href="#">Terms</a><span> | </span><a href="#">Privacy</a>
     </div>
-  </div>
-  </div>
+</div>
+</div>
+
+<script>
+    const votes_to_skip = document.getElementsById('votes_to_skip')
+    const guest_can_pause = document.getElementsById('guest_can_pause')
+    const form = document.getElementsById('form')
+
+    form.addEventListener('submit', (e)=> {
+        e.preventDefault();
+    })
+</script>
