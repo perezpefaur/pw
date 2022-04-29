@@ -49,6 +49,6 @@ const urlLocationHandler = async () => {
         response.text();
         console.log(response);
         console.log(response.text);
-        document.getElementById("content").innerHTML = html;
+        document.getElementById("content").innerHTML = response;
     });
 }
