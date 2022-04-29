@@ -1,3 +1,12 @@
+<script defer>
+    const votes_to_skip = document.getElementsById('votes_to_skip')
+    const guest_can_pause = document.getElementsById('guest_can_pause')
+    const form = document.getElementsById('form')
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    })
+</script>
 <br><br><br><br><br><br>
 <div id="top">
     <br><br><br><br>
@@ -32,12 +41,3 @@
         </div>
     </div>
 </div>
-<script defer>
-    const votes_to_skip = document.getElementsById('votes_to_skip')
-    const guest_can_pause = document.getElementsById('guest_can_pause')
-    const form = document.getElementsById('form')
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-    })
-</script>
