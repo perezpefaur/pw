@@ -8,20 +8,28 @@
         <title>CTPLMDC</title>
         <link rel="stylesheet" href="src/styles.css">
         <link rel="manifest" href="manifest.json">
-        <link rel="apple-touch-icon" href="images/logo.png">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
-        <script>
-            async function subscribe() {
-                let sw = await navigator.serviceWorker.ready;
-                let push = await sw.pushManager.subscribe({
-                    userVisibleOnly: true,
-                    applicationServerKey: 'BB2VclKxEI2khPyc0DZyhtlvhBYwfGKr-cd-PSk5-0h2xRL6vXNYF8kSXJe5s7L0lR2-YuBpVppGUYz4pEmsTeo'
-                })
-                console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
-            }
-        </script>
-        <button onclick="subscribe()">Subscribe</button>
-        <script src="src/index.js"></script>
+        <div id="main">
+            <div id="app">
+                <script>
+                    async function subscribe() {
+                        let sw = await navigator.serviceWorker.ready;
+                        let push = await sw.pushManager.subscribe({
+                            userVisibleOnly: true,
+                            applicationServerKey: 'BB2VclKxEI2khPyc0DZyhtlvhBYwfGKr-cd-PSk5-0h2xRL6vXNYF8kSXJe5s7L0lR2-YuBpVppGUYz4pEmsTeo'
+                        })
+                        console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
+                    }
+                </script>
+                <button class="btn waves-effect waves-light" onclick="subscribe()">Subscribe</button>
+                <script src="src/index.js"></script>
+            </div>
+        </div>
     </body>
 </html>
