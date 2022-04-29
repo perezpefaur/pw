@@ -13,8 +13,9 @@ function create() {
                 votes_to_skip: votes_to_skip.value,
                 guest_can_pause: guest_can_pause.checked
             }),
-            headers: { 
-            "Content-type": "application/json",
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin":"*"
             }
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
