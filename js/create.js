@@ -4,6 +4,7 @@ function create() {
     let form = document.getElementById('form');
     console.log(votes_to_skip.value);
     console.log(guest_can_pause.value);
+    console.log(guest_can_pause.checked);
 }
 
 console.log('matias');
