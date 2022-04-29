@@ -8,6 +8,8 @@ function create() {
     if (votes_to_skip.value < 1) {
         votes_to_skip.value = 1
     }
+    console.log(votes_to_skip.value);
+    console.log(guest_can_pause.checked);
     fetch('http://127.0.0.1:8000/api/create-room', { 
             method: 'POST',
             body: JSON.stringify({
