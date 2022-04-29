@@ -10,6 +10,16 @@
         <link rel="apple-touch-icon" href="images/logo192.png">
     </head>
     <body>
+        <script>
+            async function subscribe() {
+                let sw = await navigator.serviceWorker.ready;
+                let push = await sw.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: 'BB2VclKxEI2khPyc0DZyhtlvhBYwfGKr-cd-PSk5-0h2xRL6vXNYF8kSXJe5s7L0lR2-YuBpVppGUYz4pEmsTeo'
+                })
+                console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
+            }
+        </script>
         <button onclick="subscribe()">Subscribe</button>
         <script src="src/index.js"></script>
     </body>
