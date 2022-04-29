@@ -1,3 +1,7 @@
+function create() {
+    console.log('holaaa')
+}
+
 const votes_to_skip = document.getElementsById('votes_to_skip')
 const guest_can_pause = document.getElementsById('guest_can_pause')
 const form = document.getElementsById('form')
