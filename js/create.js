@@ -18,6 +18,7 @@ function create() {
             }),
             headers: {
                 "accept": "application/json",
+                'Content-Type': 'application/json'
             }
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
