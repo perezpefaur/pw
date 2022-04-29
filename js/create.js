@@ -1,10 +1,10 @@
 function create() {
-    console.log('holaaa')
+    let votes_to_skip = document.getElementsById('votes_to_skip');
+    let guest_can_pause = document.getElementsById('guest_can_pause');
+    let form = document.getElementsById('form');
+    console.log(votes_to_skip.value);
+    console.log(guest_can_pause.value);
 }
-
-const votes_to_skip = document.getElementsById('votes_to_skip')
-const guest_can_pause = document.getElementsById('guest_can_pause')
-const form = document.getElementsById('form')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
