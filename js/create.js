@@ -12,7 +12,7 @@ function create() {
             mode: 'no-cors',
             body: JSON.stringify({
                 votes_to_skip: votes_to_skip.value,
-                guest_can_pause: guest_can_pause.checked
+                guest_can_pause: guest_can_pause.checked,
             }),
             headers: { "Content-type": "application/json",}
             }).then(response => response.json())
