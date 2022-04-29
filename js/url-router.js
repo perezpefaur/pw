@@ -32,7 +32,13 @@ const urlRoutes = {
         template: "/templates/create.html",
         title: '',
         description: ''
-    }
+    },
+    "/room": {
+        template: "/templates/room.html",
+        title: '',
+        description: ''
+    },
+
 }
 
 const urlRoute = (event) => {
