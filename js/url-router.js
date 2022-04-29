@@ -28,6 +28,11 @@ const urlRoutes = {
         title: '',
         description: ''
     },
+    "/create": {
+        template: "/templates/create.html",
+        title: '',
+        description: ''
+    },
 
 }
 
