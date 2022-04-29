@@ -5,13 +5,13 @@ function create() {
     if (votes_to_skip.value == '' || votes_to_skip.value == null){
         errorElement.innerText = 'Tienes que ingresar un numero valido.'
     }
-    console.log(votes_to_skip);
-    console.log(guest_can_pause);
+    console.log(votes_to_skip.value);
+    console.log(guest_can_pause.checked);
     fetch('http://127.0.0.1:8000/api/create-room', { 
             method: 'POST',
             body: JSON.stringify({
-                votes_to_skip: votes_to_skip,
-                guest_can_pause: guest_can_pause
+                votes_to_skip: votes_to_skip.value,
+                guest_can_pause: guest_can_pause.checked
             }),
             headers: { "Content-type": "application/json",}
             }).then(response => response.json())
