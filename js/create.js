@@ -8,8 +8,3 @@ function create() {
     console.log(votes_to_skip.value);
     console.log(guest_can_pause.checked);
 }
-
-console.log('matias');
-console.log(votes_to_skip);
-console.log(guest_can_pause);
-console.log(form);
