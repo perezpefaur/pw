@@ -22,7 +22,9 @@
                     <a href="/about">About Us</a>
                     <a href="/contact">Contact Us</a>
                 </nav>
-                <div id="content"></div>
+                <div id="content">
+                    <button class="btn waves-effect waves-light yellow darken-4" onclick="subscribe()">Subscribe</button>
+                </div>
             </div>
         </div>
         <script>
@@ -35,7 +37,6 @@
                 console.log(JSON.stringify(push)) // se supone que se deberia volver a la api
             }
         </script>
-        <button class="btn waves-effect waves-light yellow darken-4" onclick="subscribe()">Subscribe</button>
         <script type="module" src="js/index.js"></script>
         <script type="module" src="js/url-router.js"></script>
     </body>
