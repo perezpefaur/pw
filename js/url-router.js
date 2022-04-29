@@ -33,6 +33,11 @@ const urlRoutes = {
         title: '',
         description: ''
     },
+    "/room": {
+        template: "/templates/room.html",
+        title: '',
+        description: ''
+    },
 
 }
 
