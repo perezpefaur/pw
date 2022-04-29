@@ -12,7 +12,6 @@ function create() {
     console.log(guest_can_pause.checked);
     fetch('http://127.0.0.1:8000/api/create-room', { 
             method: 'POST',
-            mode: 'no-cors',
             body: JSON.stringify({
                 votes_to_skip: votes_to_skip.value,
                 guest_can_pause: guest_can_pause.checked
