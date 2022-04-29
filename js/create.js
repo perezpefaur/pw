@@ -15,7 +15,7 @@ function create() {
             }),
             headers: { 
             "Content-type": "application/json",
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "http://127.0.0.1:8000"
             }
             }).then(response => response.json())
       .then(json => console.log(json)).catch(err => alert(err))
