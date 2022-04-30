@@ -83,10 +83,6 @@ function exit() {
             }
             }).then(response => response.json())
       .then(json => {
-          fetch('/').then((response) => {
-            response.text().then((data) => {
-                document.getElementById("content").innerHTML = data;
-            });
-        });
+            urlLocationHandler();
         }).catch(err => alert(err))
 }
