@@ -44,7 +44,7 @@ function join() {
             body: JSON.stringify({
                 code: room_pin.value
             }),
-            credentials: true,
+            credentials: 'include',
             headers: {
                 "accept": "application/json",
                 'Content-Type': 'application/json'
