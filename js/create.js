@@ -22,7 +22,7 @@ function create() {
             }
             }).then(response => response.json())
       .then(json => {
-          console.log(json);
+          console.log(json['code']);
           fetch('/templates/room.html').then((response) => {
             response.text().then((data) => {
                 document.getElementById("content").innerHTML = data;
