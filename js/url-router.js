@@ -73,6 +73,15 @@ fetch('http://127.0.0.1:8000/api/user-in-room', {
 .then(json => {
     console.log(json['code']);
     console.log(json);
+    if (json['code']) {
+        fetch('/templates/room.html').then((response) => {
+            response.text().then((data) => {
+                document.getElementById("content").innerHTML = data;
+                document.getElementById("code").innerHTML = json['code'];
+            });
+        });
+    }
+    else {
+        urlLocationHandler();
+    }
 }).catch(err => alert(err))
-
-urlLocationHandler();
