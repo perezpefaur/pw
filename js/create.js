@@ -58,7 +58,7 @@ function join() {
             response.text().then((data) => {
                 document.getElementById("content").innerHTML = data;
                 document.getElementById("code").innerHTML = json['code'];
-                document.getElementById("icon_bool").innerHTML = "<img src=\"https://cdn-icons-png.flaticon.com/512/6276/6276686.png\" width=\"400px\" height=\"150px\">";
+                document.getElementById("icon_bool").innerHTML = "<img class=\"icono\" src=\"https://cdn-icons-png.flaticon.com/512/6276/6276686.png\" >";
             });
         });
         }).catch(err => alert(err))

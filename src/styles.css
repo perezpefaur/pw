@@ -255,3 +255,7 @@ input:checked + .switch-left + .switch-right::before {
   font-size:13px;
 }
 
+.icono img{
+  width: 40px,
+}
+
