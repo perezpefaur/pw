@@ -44,10 +44,10 @@ function join() {
             body: JSON.stringify({
                 code: room_pin.value
             }),
+            credentials: 'include',
             headers: {
                 "accept": "application/json",
-                'Content-Type': 'application/json',
-                "withCredentials": 'true'
+                'Content-Type': 'application/json'
             }
             }).then(response => response.json())
       .then(json => {
