@@ -46,7 +46,8 @@ function join() {
             }),
             headers: {
                 "accept": "application/json",
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "withCredentials": 'true'
             }
             }).then(response => response.json())
       .then(json => {
