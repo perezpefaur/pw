@@ -21,5 +21,12 @@ function create() {
                 'Content-Type': 'application/json'
             }
             }).then(response => response.json())
-      .then(json => console.log(json)).catch(err => alert(err))
+      .then(json => {
+          console.log(json);
+          const html = await fetch('/templates/room.html').then((response) => {
+            response.text().then((data) => {
+                document.getElementById("content").innerHTML = data;
+            });
+        });
+        }).catch(err => alert(err))
 }
