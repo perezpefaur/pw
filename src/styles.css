@@ -243,7 +243,13 @@ input:checked + .switch-left + .switch-right::before {
   background-color: #ccc;
 }
 
-.code{
+.code {
+  font-family: 'Montserrat', sans-serif;
+  font-size:33px;
+}
+
+.codeBig {
   font-family: 'Montserrat', sans-serif;
   font-size:43px;
 }
+
