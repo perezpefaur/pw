@@ -245,11 +245,12 @@ input:checked + .switch-left + .switch-right::before {
 
 .code {
   font-family: 'Montserrat', sans-serif;
-  font-size:33px;
+  font-size: 23px;
+  margin-top: -10px;
 }
 
-.codeBig {
+.codeLittle {
   font-family: 'Montserrat', sans-serif;
-  font-size:43px;
+  font-size:13px;
 }
 
