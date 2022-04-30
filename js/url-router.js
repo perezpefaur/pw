@@ -62,7 +62,7 @@ const urlLocationHandler = async () => {
     });
 }
 
-fetch('http://127.0.0.1:8000/api/create-room', { 
+fetch('http://127.0.0.1:8000/api/user-in-room', { 
     method: 'GET',
     credentials: 'include',
     headers: {
