@@ -62,4 +62,17 @@ const urlLocationHandler = async () => {
     });
 }
 
+fetch('http://127.0.0.1:8000/api/create-room', { 
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+        "accept": "application/json",
+        'Content-Type': 'application/json'
+    }
+    }).then(response => response.json())
+.then(json => {
+    console.log(json['code']);
+    console.log(json);
+}).catch(err => alert(err))
+
 urlLocationHandler();
