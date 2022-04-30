@@ -64,7 +64,7 @@ const urlLocationHandler = async () => {
 
 fetch('http://127.0.0.1:8000/api/user-in-room', { 
     method: 'GET',
-    credentials: 'same-origin',
+    credentials: 'include',
     headers: {
         "accept": "application/json",
         'Content-Type': 'application/json'
