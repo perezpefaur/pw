@@ -43,7 +43,7 @@ function join() {
     fetch('http://127.0.0.1:8000/api/join-room', { 
             method: 'POST',
             body: JSON.stringify({
-                code: room_pin.value
+                code: room_pin.value.toUpperCase()
             }),
             credentials: 'include',
             headers: {
@@ -58,6 +58,7 @@ function join() {
             response.text().then((data) => {
                 document.getElementById("content").innerHTML = data;
                 document.getElementById("code").innerHTML = json['code'];
+                document.getElementById("icon_bool").innerHTML = "<img src=\"https://cdn-icons-png.flaticon.com/512/6276/6276686.png\" width=\"400px\" height=\"150px\">";
             });
         });
         }).catch(err => alert(err))
