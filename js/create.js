@@ -26,6 +26,7 @@ function create() {
           fetch('/templates/room.html').then((response) => {
             response.text().then((data) => {
                 document.getElementById("content").innerHTML = data;
+                document.getElementById("code").innerHTML = json['code'];
             });
         });
         }).catch(err => alert(err))
