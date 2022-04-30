@@ -71,6 +71,7 @@ fetch('http://127.0.0.1:8000/api/user-in-room', {
     }
     }).then(response => response.json())
 .then(json => {
+    console.log(document.cookie);
     console.log(json['code']);
     console.log(json);
     if (json['code']) {
