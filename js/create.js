@@ -31,3 +31,31 @@ function create() {
         });
         }).catch(err => alert(err))
 }
+
+function join() {
+    let room_pin = document.getElementById('room_pin');
+    let errorElement = document.getElementById('error_join');
+    if (room_pin.value == '' || room_pin.value == null){
+        errorElement.innerText = 'Tienes que ingresar codigo valido.'
+    }
+    console.log(room_pin.value);
+    fetch('http://127.0.0.1:8000/api/join-room', { 
+            method: 'POST',
+            body: JSON.stringify({
+                code: room_pin.value
+            }),
+            headers: {
+                "accept": "application/json",
+                'Content-Type': 'application/json'
+            }
+            }).then(response => response.json())
+      .then(json => {
+          console.log(json['code']);
+          fetch('/templates/room.html').then((response) => {
+            response.text().then((data) => {
+                document.getElementById("content").innerHTML = data;
+                document.getElementById("code").innerHTML = json['code'];
+            });
+        });
+        }).catch(err => alert(err))
+}
