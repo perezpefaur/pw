@@ -59,9 +59,9 @@ function join() {
                 document.getElementById("content").innerHTML = data;
                 document.getElementById("code").innerHTML = json['code'];
                 if (json['guest_can_pause'] == false || json['guest_can_pause'] == 'false') {
-                    document.getElementById("icon_bool").innerHTML = "<img class=\"icono\" src=\"https://cdn-icons-png.flaticon.com/512/1810/1810746.png\" style=\"width: 70px;\" >";
+                    document.getElementById("icon_bool").innerHTML = "<img class=\"icono\" src=\"https://cdn-icons-png.flaticon.com/512/1810/1810746.png\" style=\"width: 60px;\" >";
                 } else {
-                    document.getElementById("icon_bool").innerHTML = "<img class=\"icono\" src=\"https://cdn-icons-png.flaticon.com/512/6276/6276686.png\" style=\"width: 70px;\" >";
+                    document.getElementById("icon_bool").innerHTML = "<img class=\"icono\" src=\"https://cdn-icons-png.flaticon.com/512/6276/6276686.png\" style=\"width: 60px;\" >";
                 }
             });
         });
