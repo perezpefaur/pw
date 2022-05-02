@@ -10,7 +10,7 @@ function create() {
     }
     console.log(votes_to_skip.value);
     console.log(guest_can_pause.checked);
-    fetch('http://127.0.0.1:8000/api/create-room', { 
+    fetch('https://ctplmdc.herokuapp.com/api/create-room', { 
             method: 'POST',
             credentials: 'include',
             body: JSON.stringify({
@@ -45,7 +45,7 @@ function join() {
         errorElement.innerText = 'Tienes que ingresar codigo valido.'
     }
     console.log(room_pin.value);
-    fetch('http://127.0.0.1:8000/api/join-room', { 
+    fetch('https://ctplmdc.herokuapp.com/api/join-room', { 
             method: 'POST',
             body: JSON.stringify({
                 code: room_pin.value.toUpperCase()
@@ -74,7 +74,7 @@ function join() {
 }
 
 function exit() {
-    fetch('http://127.0.0.1:8000/api/leave-room', { 
+    fetch('https://ctplmdc.herokuapp.com/api/leave-room', { 
             method: 'POST',
             credentials: 'include',
             headers: {
